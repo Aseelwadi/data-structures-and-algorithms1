@@ -111,11 +111,7 @@ If the user enters any of these four inputs, return true. For any other input, r
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = (input) => {
-    // Solution code here...
-    let con = /\b(oct)\b|\b(october)\b|\b(Oct)\b|\b(October)\b/g;
-    return con.test(input);
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
