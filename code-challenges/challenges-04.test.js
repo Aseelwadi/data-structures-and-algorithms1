@@ -10,11 +10,10 @@ const addTwo = (arr) => {
     // Solution code here...
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
-        newArr.push(arr[i] + 2);
+        newArr[i] = arr[i] + 2;
     }
     return newArr;
 }
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -31,8 +30,7 @@ const containsW = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named isNum that takes in a string or number of any length. This function 
-should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
+Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
 
 For example:
 12345 returns true
@@ -49,9 +47,7 @@ const isNum = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named containsWorld that takes in a string or number of any length.
- This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters,
-  and false if the input does not.
+Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -63,8 +59,7 @@ const containsWorld = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all
- words that begin with a capital letter. It should only match words, not punctuation.
+Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
 
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
@@ -82,22 +77,20 @@ const isCapitalized = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing
- any cities that begin with the letters A through J, inclusive.
+Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
     // Solution code here...
-    let city = /^\b[A-J]\w*/g;
+    let con = /^\b[A-J]\w*/g;
     let newArr = [];
     arr.forEach(element => {
-        if (element.match(city)) {
+        if (element.match(con)) {
             newArr.push(element);
         }
     });
     return newArr;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -113,15 +106,14 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
     // Solution code here...
-    let con = /\b(oct)\b|\b(october)\b|\b(Oct)\b|\b(October)\b/g;
+    let con = /\b(October)\b|\b(october)\b|\b(Oct)\b|\b(oct)\b/g;
     return con.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
-Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately
- at the end of the word. Return an array of all such words, still containing the space at the end.
+Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
 
 For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
 
@@ -247,7 +239,7 @@ describe('Testing challenge 6', () => {
     });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
     test('It should match any of the acceptable inputs', () => {
         expect(matchMonth('Oct')).toBeTruthy();
         expect(matchMonth('oct')).toBeTruthy();

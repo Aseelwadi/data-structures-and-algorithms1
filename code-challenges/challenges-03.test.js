@@ -194,18 +194,9 @@ Sort the meetings by the day on which they happen, Monday-Friday. It does not ma
 ------------------------------------------------------------------------------------------------ */
 
 function Meeting(dayOfWeek, start, end) {
-    this.dayOfWeek = dayOfWeek;
-    this.start = start;
-    this.end = end;
+
 }
-const meetings = [
-    new Meeting('Monday', '0900', '1000'),
-    new Meeting('Wednesday', '1300', '1500'),
-    new Meeting('Tuesday', '1145', '1315'),
-    new Meeting('Wednesday', '0930', '1000'),
-    new Meeting('Monday', '0900', '0945'),
-    new Meeting('Friday', '1200', '1345'),
-];
+
 
 const sortMeetingsByDay = (arr) => {
     // Solution code here...
