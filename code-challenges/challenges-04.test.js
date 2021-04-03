@@ -289,4 +289,4 @@ xdescribe('Testing challenge 10', () => {
         expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
         expect(findShells(seashells).length).toStrictEqual(9);
     });
-});
+
